@@ -1,45 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N-MAS</title>
-    <style>
-    /* Styles for the video container */
-    .video-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #000;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N-MAS Platform Welcome Page</title>
+  <style>
+    a img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border: none;
+    }
+  
+  
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Styles for the video element */
-    video {
-      max-width: 100%;
-      max-height: 100%;
+    h1 {
+      color: #333;
+      margin: 20px 0;
     }
-    </style>
+
+    #video-container {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #comments {
+      margin: 20px auto;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    .comment {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="video-container">
-        <video id="my-video" width="1280" height="720" controls>
-            <source src="http://219.250.188.160/N-MAS_PT.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <script>
-    // Get the video element
-    const video = document.getElementById('my-video');
+  <h1>Welcome to the N-MAS Platform</h1>
 
-    // Add a click event listener to the video element
-    video.addEventListener('click', function () {
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
-    </script>
+  <!-- Video -->
+  <div id="video-container">
+    <!--video width="100%" controls>
+      <source src="http://219.250.188.160/N-MAS_PT.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video-->
+	<a href="http://219.250.188.160/N-MAS_PT.mp4" target="_blank">
+    <img src="http://219.250.188.160/thumbnail_play.png" alt="Video Thumbnail">
+  </a>
+  </div>
+
+  <!-- Comments -->
+  <div id="comments">
+    <div class="comment">
+      <p>IoT platform based on the oneM2M standard</p>
+    </div>
+    <div class="comment">
+      <p>GCF certified and experienced in working with a wide range of devices</p>
+    </div>
+    <div class="comment">
+      <p>Flexible platform integration technology</p>
+    </div>
+  </div>
 </body>
 </html>
